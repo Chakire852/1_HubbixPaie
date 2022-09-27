@@ -1,0 +1,29 @@
+<h2 class="display-6 text-center">
+  Liste de codes disponibles en LegiFrance
+</h2>
+<div class="container">
+  <div class="my-overlay" *ngIf="loading">
+    <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
+  </div>
+  <div *ngIf="!loading">
+    <table class="table" *ngIf="codesLegifrance !== undefined">
+      <thead>
+        <tr>
+          <th scope="col">Nom du document</th>
+          <th scope="col">Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let code of codesLegifrance">
+          <td>{{code.name}}</td>
+          <td>{{code.date | date:'mediumDate'}}</td>
+          <td>
+            <button class="btn btn-link" id={{code.doc_id}} (click)="CheckDocumentById(code.doc_id)">Télécharger</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

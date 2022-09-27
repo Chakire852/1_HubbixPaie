@@ -1,0 +1,26 @@
+<h2 class="display-6 text-center">
+  {{docName}} du {{docDate | date:'dd/MM/yyyy'}}
+</h2>
+<div class="container">
+  <div class="my-overlay" *ngIf="loading; else tableResults">
+    <i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>
+  </div>
+  <ng-template #tableResults>
+    <table class="table" *ngIf="Articles.length > 0">
+      <thead>
+        <tr>
+          <th scope="col" style="width: 10%;">Numèro</th>
+          <th scope="col">Texte</th>
+          <th scope="col" style="width: 10%; text-align: center;" *ngIf="docProcessed">Cluster</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let art of Articles;">
+          <td>{{art.name}}</td>
+          <td style="text-align: justify">{{art.text}}</td>
+          <td *ngIf="docProcessed" style="text-align: center;">{{art.cluster}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</div>

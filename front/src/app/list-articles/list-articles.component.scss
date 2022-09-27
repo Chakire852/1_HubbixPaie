@@ -1,0 +1,28 @@
+td {
+  vertical-align: middle
+}
+
+table {
+  margin-top: 50px;
+  margin-bottom: 100px
+}
+
+th {
+  vertical-align: middle !important;
+}
+
+.my-overlay {
+  background-color: white !important;
+  cursor: pointer !important;
+  visibility: visible !important;
+  transition: visibility 0s, opacity 0.4s linear !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: wait !important;
+  margin-top: 100px;
+}
+
+.my-overlay i.fa.fa-spinner.fa-pulse, .spinner-big {
+  font-size: 100px !important;
+}

@@ -1,0 +1,9 @@
+<p class="text-center">{{message1}}</p>
+<p *ngIf="message2 !== undefined" class="text-center">{{message2}}</p>
+<p *ngIf="message3 !== undefined" class="text-center">{{message3}}</p>
+<ng-content></ng-content>
+
+<mat-dialog-actions align="center">
+  <button mat-stroked-button color="warn" [mat-dialog-close]>Cancel</button>
+  <button mat-stroked-button color="custom" mat-dialog-close="true" cdkFocusInitial>{{buttonText}}</button>
+</mat-dialog-actions>
