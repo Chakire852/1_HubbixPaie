@@ -1,5 +1,18 @@
-API created using Fast API
-Virtuel environment using Poetry
-Front app created using React
+Pour exécuter l'API :
 
-Run server using `poetry run python app/main.py`
+- Installer Python depuis le site officiel, ne pas depuis le Microsoft Store
+- Installer le gestionnaire d'environement virtuel Poetry :
+  https://python-poetry.org/docs/#installation
+  Veuillez de bien ajouter Poetry aux variables d'environnement
+- Ouvrir le dossier back dans une fenêtre du terminal
+- Exécuter la commande : "poetry install" afin d'installer toutes les dépendences
+- Exécuter la commande : "poetry shell" afin de lancer l'environemment virtuel
+- Exécuter la commande : "poetry run python app/main.py" pour lancer l'application
+
+Pour lancer le front :
+
+- Installer Angular :
+  https://apcpedagogie.com/installation-dangular/
+- Ouvrir le dossier front dans un autre fenêtre du terminal
+- Exécuter la commande : "ng install" pour installer les dépendences
+- Exécuter la commande : "ng serve" pour lancer l'application
