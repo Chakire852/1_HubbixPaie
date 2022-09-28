@@ -155,7 +155,7 @@ def clusterDocument(doc_id):
     clustering, cluster_labels = mbkmeans_clusters(
 	    X = vectorized_texts,
         k = 2,
-        mb = 500,
+        mb = 512,
         print_silhouette_values=True,
     )
 
